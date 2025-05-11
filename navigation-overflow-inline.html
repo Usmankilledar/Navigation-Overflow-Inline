@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example 2: Navigation and Overflow</title>
+  <style>
+    
+    nav.horizontal {
+      background: #004466;
+      text-align: center;
+    }
+    nav.horizontal ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav.horizontal li {
+      margin: 0;
+    }
+    nav.horizontal a {
+      display: block;
+      padding: 1rem 2rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav.horizontal a:hover {
+      background: #006699;
+    }nav.vertical {
+  width: 180px;
+  background: #ddd;
+  padding: 10px;
+}
+nav.vertical ul {
+  list-style: none;
+  padding: 0;
+}
+nav.vertical li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+nav.vertical li a:hover {
+  background: #bbb;
+}
+
+
+.menu-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.menu-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #eee;
+  min-width: 160px;
+  z-index: 1;
+}
+.menu-dropdown:hover .menu-dropdown-content {
+  display: block;
+}
+.menu-dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+.menu-dropdown-content a:hover {
+  background-color: #ccc;
+}
+
+
+.responsive-checkbox-nav {
+  background-color: #444;
+}
+.responsive-checkbox-nav label {
+  color: white;
+  padding: 1rem;
+  display: none;
+  cursor: pointer;
+}
+.responsive-checkbox-nav input[type=checkbox] {
+  display: none;
+}
+.responsive-checkbox-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.responsive-checkbox-nav li {
+  flex: 1;
+}
+.responsive-checkbox-nav a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .responsive-checkbox-nav label {
+    display: block;
+  }
+  .responsive-checkbox-nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  .responsive-checkbox-nav input:checked + ul {
+    display: flex;
+  }
+}
+
+
+.overflow-box {
+  width: 200px;
+  height: 80px;
+  border: 2px dashed #666;
+  overflow: auto;
+  padding: 10px;
+}
+
+.image-overflow {
+   
+  width: 250px;
+  height: 70px;
+  overflow: hidden;
+  object-fit: cover;
+  border: 1px solid #000;
+}
+.image-overflow img {
+  width: 250px;
+}
+
+
+.inline-block-demo div {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin: 5px;
+  background-color: #99c;
+  text-align: center;
+  line-height: 80px;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+  <h2>Horizontal Menu</h2>
+  <nav class="horizontal">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>  <h2>Vertical Menu</h2>
+  <nav class="vertical">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>  <h2>Dropdown Menu</h2>
+  <div class="menu-dropdown">
+    <a href="#">Options</a>
+    <div class="menu-dropdown-content">
+      <a href="#">Settings</a>
+      <a href="#">Help</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>  <h2>Responsive Navigation</h2>
+  <nav class="responsive-checkbox-nav">
+    <label for="nav-toggle">☰ Menu</label>
+    <input type="checkbox" id="nav-toggle">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>  <h2>Overflow Example</h2>
+  <div class="overflow-box">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>  <h2>Image Overflow</h2>
+  <div class="image-overflow">
+    <img src="WhatsApp Image 2025-04-18 at 12.40.52 PM.jpeg" alt="Example">
+  </div>  <h2>Inline-Block Example</h2>
+  <div class="inline-block-demo">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+  </div>
+</body>
+</html>
